@@ -1,0 +1,29 @@
+2018-11-29T17:09:43+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerce::add_error() in C:\OpenServer\domains\kubik.local\wp-content\themes\storefront\functions.php:398
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-includes\class-wp-hook.php(286): my_custom_checkout_field_process('')
+#1 C:\OpenServer\domains\kubik.local\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OpenServer\domains\kubik.local\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(1050): do_action('woocommerce_che...')
+#4 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-ajax.php(434): WC_Checkout->process_checkout()
+#5 C:\OpenServer\domains\kubik.local\wp-includes\class-wp-hook.php(286): WC_AJAX::checkout('')
+#6 C:\OpenServer\domains\kubik.local\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#7 C:\OpenServer\domains\kubik.local\wp-includes\plugin.php(453): WP_Hook->do в C:\OpenServer\domains\kubik.local\wp-content\themes\storefront\functions.php на строке 398
+
+2018-11-29T22:03:55+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php:726
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(274): wc_get_template('checkout/form-c...', Array)
+#2 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\OpenServer\domains\kubik.local\wp-includes\shortcodes.php(319): WC_Shortcodes::checkout('', '', в C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php на строке 726
+
+2018-11-29T22:11:09+00:00 CRITICAL Uncaught Error: Call to a member function get_attributes() on null in C:\OpenServer\domains\kubik.local\wp-content\themes\storefront\select_field_to_product.php:10
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php(724): wp_woo_cart_attributes()
+#1 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(274): wc_get_template('checkout/form-c...', Array)
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#4 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#5 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(95) в C:\OpenServer\domains\kubik.local\wp-content\themes\storefront\select_field_to_product.php на строке 10
+

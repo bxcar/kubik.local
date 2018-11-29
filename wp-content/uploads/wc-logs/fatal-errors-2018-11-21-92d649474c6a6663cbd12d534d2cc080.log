@@ -1,0 +1,32 @@
+2018-11-21T18:57:03+00:00 CRITICAL Uncaught UnexpectedValueException: DirectoryIterator::__construct(/wp-content/themes/storefront/img/photo,/wp-content/themes/storefront/img/photo): ������� �� ������ ����� �������� ���. (code: 3) in C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php:135
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php(135): DirectoryIterator->__construct('/wp-content/the...')
+#1 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(274): wc_get_template('checkout/form-c...', Array)
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#4 C:\OpenSer в C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php на строке 135
+
+2018-11-21T18:59:33+00:00 CRITICAL Uncaught UnexpectedValueException: DirectoryIterator::__construct(../../../../themes/storefront/img/photo,../../../../themes/storefront/img/photo): ������� �� ������ ����� �������� ���. (code: 3) in C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php:135
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php(135): DirectoryIterator->__construct('../../../../the...')
+#1 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(274): wc_get_template('checkout/form-c...', Array)
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#4 C:\OpenSer в C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php на строке 135
+
+2018-11-21T19:01:27+00:00 CRITICAL Uncaught UnexpectedValueException: DirectoryIterator::__construct(/kubik.local,/kubik.local): �� ������ ����� �������� ����. (code: 2) in C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php:135
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php(135): DirectoryIterator->__construct('/kubik.local')
+#1 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(274): wc_get_template('checkout/form-c...', Array)
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#4 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-shortc в C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php на строке 135
+
+2018-11-21T19:01:40+00:00 CRITICAL Uncaught UnexpectedValueException: DirectoryIterator::__construct(/wp-content,/wp-content): �� ������ ����� �������� ����. (code: 2) in C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php:135
+Stack trace:
+#0 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php(135): DirectoryIterator->__construct('/wp-content')
+#1 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(274): wc_get_template('checkout/form-c...', Array)
+#3 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#4 C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\includes\class-wc-shortcode в C:\OpenServer\domains\kubik.local\wp-content\plugins\woocommerce\templates\checkout\form-checkout.php на строке 135
+

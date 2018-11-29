@@ -1,0 +1,12 @@
+wp-admin
+admin
+Go!xhG(jxo))DW$OBJ
+
+bd
+webdev47_kubik
+webdev47_kubik
+b0mD_eA_15
+webdev47.mysql.tools
+
+define( 'WP_HOME', 'http://1280850.webdev47.web.hosting-test.net');
+define( 'WP_SITEURL', 'http://1280850.webdev47.web.hosting-test.net');
