@@ -475,9 +475,15 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
             <a class="delete-images" href="#">
                 Удалить изображения
             </a>
+            <div class="step-buttons">
+                <button id="to2step" style="margin-top: 20px;" type="button" class="btn btn-secondary">Седующий шаг</button>
+            </div>
         </div>
 
         <div class="addition-steps__step1 step2">
+            <div class="step-buttons">
+                <button id="to1step" style="margin-bottom: 20px;" type="button" class="btn btn-secondary">Предыдущий шаг</button>
+            </div>
             <div class="addition-steps__steps-numbers">
                 <div class="addition-steps__number active">2</div>
                 <div class="addition-steps__steps-numbers-line"></div>
@@ -903,7 +909,7 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
         }
 
         .addition-steps__step1.step2 {
-            margin-top: 80px;
+            /*margin-top: 80px;*/
         }
 
         .addition-steps__bg-title {
@@ -980,6 +986,15 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
             position: absolute;
         }
 
+        .step2,
+        #customer_details,
+        #order_review_heading,
+        #order_review {
+            display: none;
+        }
+
+
+
     </style>
 
     <script>
@@ -1012,6 +1027,27 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
         /*$("body").on('DOMSubtreeModified', "#editor", function() {
             console.log(document.getElementById('editor').innerText.length);
         });*/
+
+        $( "#to2step" ).click(function() {
+            $( ".addition-steps .addition-steps__step1:first-child" ).css('display', 'none');
+            $( ".step2" ).css('display', 'flex');
+            $( "#customer_details" ).css('display', 'block');
+            $( "#order_review_heading" ).css('display', 'block');
+            $( "#order_review" ).css('display', 'block');
+
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#to1step").offset().top
+            }, 20);
+        });
+
+        $( "#to1step" ).click(function() {
+            $( ".addition-steps .addition-steps__step1:first-child" ).css('display', 'flex');
+            $( ".step2" ).css('display', 'none');
+            $( "#customer_details" ).css('display', 'none');
+            $( "#order_review_heading" ).css('display', 'none');
+            $( "#order_review" ).css('display', 'none');
+        });
+
     </script>
 
 <!--    --><?php //wp_woo_cart_attributes(); ?>
