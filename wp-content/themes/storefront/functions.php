@@ -135,8 +135,8 @@ function custom_checkout_field($checkout)
     echo '</div>';
 
 
-    for($i = 1; $i <= 19; $i++) {
-        woocommerce_form_field('custom_img_'. $i, array(
+    for ($i = 1; $i <= 19; $i++) {
+        woocommerce_form_field('custom_img_' . $i, array(
 
             'type' => 'text',
 
@@ -179,9 +179,7 @@ function custom_checkout_field($checkout)
 
 
 /**
-
  * Checkout Process
-
  */
 
 add_action('woocommerce_checkout_process', 'customised_checkout_field_process');
@@ -192,18 +190,16 @@ function customised_checkout_field_process()
 
 // Show an error message if the field is not set.
 
-    if (!$_POST['custom_description']) wc_add_notice(__('Please enter value!') , 'error');
-    for($i = 1; $i <= 9; $i++) {
-        if (!$_POST['custom_img_' . $i]) wc_add_notice(__('Please enter value!') , 'error');
+    if (!$_POST['custom_description']) wc_add_notice(__('Please enter value!'), 'error');
+    for ($i = 1; $i <= 9; $i++) {
+        if (!$_POST['custom_img_' . $i]) wc_add_notice(__('Please enter value!'), 'error');
     }
 //    if (!$_POST['custom_background']) wc_add_notice(__('Please enter value!') , 'error');
 
 }
 
 /**
-
  * Update the value given in custom field
-
  */
 
 add_action('woocommerce_checkout_update_order_meta', 'custom_checkout_field_update_order_meta');
@@ -215,77 +211,86 @@ function custom_checkout_field_update_order_meta($order_id)
     if (!empty($_POST['custom_description'])) {
 
         /*update_post_meta($order_id, 'test_description',sanitize_text_field($_POST['custom_description']));*/
-        update_post_meta($order_id, 'custom_description',$_POST['custom_description']);
+        update_post_meta($order_id, 'custom_description', $_POST['custom_description']);
 
     }
 
-    for($i = 1; $i <= 19; $i++) {
+    for ($i = 1; $i <= 19; $i++) {
         if (!empty($_POST['custom_img_' . $i])) {
-            update_post_meta($order_id, 'custom_img_'. $i,$_POST['custom_img_'. $i]);
+            update_post_meta($order_id, 'custom_img_' . $i, $_POST['custom_img_' . $i]);
 
         }
     }
 
     if (!empty($_POST['custom_background'])) {
-        update_post_meta($order_id, 'custom_background',$_POST['custom_background']);
+        update_post_meta($order_id, 'custom_background', $_POST['custom_background']);
 
     }
 
 }
 
 
-
 /**
  * Outputs a rasio button form field
  */
-function woocommerce_form_field_radio( $key, $args, $value = '' ) {
+function woocommerce_form_field_radio($key, $args, $value = '')
+{
     global $woocommerce;
     $defaults = array(
         'type' => 'radio',
         'label' => '',
         'placeholder' => '',
         'required' => false,
-        'class' => array( ),
-        'label_class' => array( ),
+        'class' => array(),
+        'label_class' => array(),
         'return' => false,
-        'options' => array( )
+        'options' => array()
     );
-    $args     = wp_parse_args( $args, $defaults );
-    if ( ( isset( $args[ 'clear' ] ) && $args[ 'clear' ] ) )
+    $args = wp_parse_args($args, $defaults);
+    if ((isset($args['clear']) && $args['clear']))
         $after = '<div class="clear"></div>';
     else
         $after = '';
-    $required = ( $args[ 'required' ] ) ? ' <abbr class="required" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>' : '';
-    switch ( $args[ 'type' ] ) {
+    $required = ($args['required']) ? ' <abbr class="required" title="' . esc_attr__('required', 'woocommerce') . '">*</abbr>' : '';
+    switch ($args['type']) {
         case "select":
             $options = '';
-            if ( !empty( $args[ 'options' ] ) )
-                foreach ( $args[ 'options' ] as $option_key => $option_text )
-                    $options .= '<input type="radio" name="' . $key . '" id="' . $key . '" value="' . $option_key . '" ' . selected( $value, $option_key, false ) . 'class="select">' . $option_text . '' . "\r\n";
-            $field = '<p class="form-row ' . implode( ' ', $args[ 'class' ] ) . '" id="' . $key . '_field">
-<label for="' . $key . '" class="' . implode( ' ', $args[ 'label_class' ] ) . '">' . $args[ 'label' ] . $required . '</label>
+            if (!empty($args['options']))
+                $i = 1;
+            foreach ($args['options'] as $option_key => $option_text) {
+                if ($i == 3) {
+                    $options .= '<input type="radio" name="' . $key . '" id="' . $key . '" value="' . $option_key . '" ' . selected($value, $option_key, false) . 'class="select"><br>' . $option_text . '' . "\r\n";
+                } else {
+                    $options .= '<input type="radio" name="' . $key . '" id="' . $key . '" value="' . $option_key . '" ' . selected($value, $option_key, false) . 'class="select">' . $option_text . '' . "\r\n";
+                }
+                $i++;
+            }
+            $field = '<p class="form-row ' . implode(' ', $args['class']) . '" id="' . $key . '_field">
+<label for="' . $key . '" class="' . implode(' ', $args['label_class']) . '">' . $args['label'] . $required . '</label>
 ' . $options . '
 </p>' . $after;
             break;
     } //$args[ 'type' ]
-    if ( $args[ 'return' ] )
+    if ($args['return'])
         return $field;
     else
         echo $field;
 }
+
 /**
  * Add the field to the checkout
  **/
-add_action( 'woocommerce_after_checkout_billing_form', 'hear_about_us_field', 10 );
-function hear_about_us_field( $checkout ) {
+add_action('woocommerce_after_checkout_billing_form', 'hear_about_us_field', 10);
+function hear_about_us_field($checkout)
+{
 
-    woocommerce_form_field_radio( 'hear_about_us', array(
+    woocommerce_form_field_radio('hear_about_us', array(
         'type' => 'select',
         'class' => array(
             'here-about-us form-row-wide'
         ),
-        'label' => __( '' ),
-        'placeholder' => __( '' ),
+        'label' => __(''),
+        'placeholder' => __(''),
         'required' => false,
         'options' => array(
             '1' => '',
@@ -296,25 +301,29 @@ function hear_about_us_field( $checkout ) {
             '6' => ''
 
         )
-    ), $checkout->get_value( 'hear_about_us' ) );
+    ), $checkout->get_value('hear_about_us'));
 }
+
 /**
  * Process the checkout
  **/
-add_action( 'woocommerce_checkout_process', 'my_custom_checkout_field_process' );
-function my_custom_checkout_field_process( ) {
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+function my_custom_checkout_field_process()
+{
     global $woocommerce;
     // Check if set, if its not set add an error.
     /*if ( !$_POST[ 'hear_about_us' ] )
         $woocommerce->add_error( __( 'Please enter something into this new shiny field.' ) );*/
 }
+
 /**
  * Update the order meta with field value
  **/
-add_action( 'woocommerce_checkout_update_order_meta', 'hear_about_us_field_update_order_meta' );
-function hear_about_us_field_update_order_meta( $order_id ) {
-    if ( $_POST[ 'hear_about_us' ] )
-        update_post_meta( $order_id, 'Background', esc_attr( $_POST[ 'hear_about_us' ] ) );
+add_action('woocommerce_checkout_update_order_meta', 'hear_about_us_field_update_order_meta');
+function hear_about_us_field_update_order_meta($order_id)
+{
+    if ($_POST['hear_about_us'])
+        update_post_meta($order_id, 'Background', esc_attr($_POST['hear_about_us']));
 }
 
 include "select_field_to_product.php";
