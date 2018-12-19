@@ -199,189 +199,33 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
                             } else {
                                 $('#custom_img_1').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
                             }
-                        } else if ($('#img-thumb2').attr('src') == '') {
-                            $('#img-thumb2').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb2').css('display', 'inline-block');
 
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_2').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_2').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb3').attr('src') == '') {
-                            $('#img-thumb3').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb3').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_3').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_3').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb4').attr('src') == '') {
-                            $('#img-thumb4').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb4').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_4').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_4').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb5').attr('src') == '') {
-                            $('#img-thumb5').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb5').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_5').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_5').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb6').attr('src') == '') {
-                            $('#img-thumb6').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb6').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_6').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_6').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb7').attr('src') == '') {
-                            $('#img-thumb7').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb7').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_7').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_7').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb8').attr('src') == '') {
-                            $('#img-thumb8').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb8').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_8').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_8').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb9').attr('src') == '') {
-                            $('#img-thumb9').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb9').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_9').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_9').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb10').attr('src') == '') {
-                            $('#img-thumb10').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb10').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_10').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_10').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb11').attr('src') == '') {
-                            $('#img-thumb11').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb11').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_11').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_11').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb12').attr('src') == '') {
-                            $('#img-thumb12').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb12').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_12').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_12').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb13').attr('src') == '') {
-                            $('#img-thumb13').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb13').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_13').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_13').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb14').attr('src') == '') {
-                            $('#img-thumb14').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb14').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_14').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_14').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb15').attr('src') == '') {
-                            $('#img-thumb15').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb15').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_15').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_15').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb16').attr('src') == '') {
-                            $('#img-thumb16').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb16').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_16').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_16').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb17').attr('src') == '') {
-                            $('#img-thumb17').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb17').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_17').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_17').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb18').attr('src') == '') {
-                            $('#img-thumb18').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb18').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_18').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_18').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
-
-                        } else if ($('#img-thumb19').attr('src') == '') {
-                            $('#img-thumb19').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            $('#img-thumb19').css('display', 'inline-block');
-
-                            if($('input[name="favphoto"]:checked').length > 0) {
-                                $('#custom_img_19').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            } else {
-                                $('#custom_img_19').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
-                            }
+                            $( "#img-thumb-span1 .close-img" ).click(function() {
+                                $('#img-thumb').attr('src', '');
+                                $('#custom_img_1').attr('value', '');
+                                $('#img-thumb').css('display', 'none');
+                            });
 
                         }
+                        <?php for($i = 2; $i <= 19; $i ++) { ?>
+                        else if ($("#img-thumb<?= $i ?>").attr('src') == '') {
+                            $('#img-thumb<?= $i ?>').attr('src', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
+                            $('#img-thumb<?= $i ?>').css('display', 'inline-block');
 
+                            if($('input[name="favphoto"]:checked').length > 0) {
+                                $('#custom_img_<?= $i ?>').attr('value', 'Избранное <?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
+                            } else {
+                                $('#custom_img_<?= $i ?>').attr('value', '<?= get_template_directory_uri();?>/img/photo/' + JSON.parse(data) + '.png' + '?' + new Date().getTime());
+                            }
 
+                            $( "#img-thumb-span<?= $i ?> .close-img" ).click(function() {
+                                $('#img-thumb<?= $i ?>').attr('src', '');
+                                $('#custom_img_<?= $i ?>').attr('value', '');
+                                $('#img-thumb<?= $i ?>').css('display', 'none');
+                            });
+
+                        }
+                        <?php } ?>
                     },
                     error: function (err) {
                         // console.log("error");
@@ -445,25 +289,16 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
             <div class="addition-steps__title">העלה 7 תמונות לריבועים הגדולים בקובייה</div>
             <img class="addition-steps__exmp-img" src="/wp-content/themes/storefront/img/add-step-example-img.png">
             <div class="addition-steps__img-dwn">
-                <img class="thumb-img" src="" id="img-thumb">
-                <img class="thumb-img" src="" id="img-thumb2">
-                <img class="thumb-img" src="" id="img-thumb3">
-                <img class="thumb-img" src="" id="img-thumb4">
-                <img class="thumb-img" src="" id="img-thumb5">
-                <img class="thumb-img" src="" id="img-thumb6">
-                <img class="thumb-img" src="" id="img-thumb7">
-                <img class="thumb-img" src="" id="img-thumb8">
-                <img class="thumb-img" src="" id="img-thumb9">
-                <img class="thumb-img" src="" id="img-thumb10">
-                <img class="thumb-img" src="" id="img-thumb11">
-                <img class="thumb-img" src="" id="img-thumb12">
-                <img class="thumb-img" src="" id="img-thumb13">
-                <img class="thumb-img" src="" id="img-thumb14">
-                <img class="thumb-img" src="" id="img-thumb15">
-                <img class="thumb-img" src="" id="img-thumb16">
-                <img class="thumb-img" src="" id="img-thumb17">
-                <img class="thumb-img" src="" id="img-thumb18">
-                <img class="thumb-img" src="" id="img-thumb19">
+                <span id="img-thumb-span1" class="img-thumb-span">
+                    <img class="thumb-img" src="" id="img-thumb">
+                    <img style="width: 15px;" class="close-img" src="/wp-content/themes/storefront/img/close-icon.png">
+                </span>
+                <?php for($i = 2; $i <= 19; $i++) { ?>
+                    <span id="img-thumb-span<?= $i ?>" class="img-thumb-span">
+                    <img class="thumb-img" src="" id="img-thumb<?= $i ?>">
+                    <img style="width: 15px;" class="close-img" src="/wp-content/themes/storefront/img/close-icon.png">
+                </span>
+                <?php } ?>
                 <!--                <img class="thumb-img" src="-->
                 <? //= get_template_directory_uri(); ?><!--/img/exmpimg.jpg" id="img-thumb5">-->
                 <span style="font-size: 16px;" class="addition-steps__img-dwn-title">Изображения</span>
@@ -696,104 +531,118 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
             position: relative;
         }
 
-        .thumb-img {
+        .close-img {
             position: absolute;
+            top: -5px;
+            right:  -5px;
+            cursor: pointer;
+        }
+
+        .thumb-img {
+            /*position: absolute;*/
             width: 55px;
             height: 55px;
             object-fit: cover
         }
 
-        .thumb-img:nth-child(1) {
+        .img-thumb-span {
+            position: absolute;
+            margin-left: 0;
+            float: none;
+        }
+
+        .img-thumb-span:nth-child(1) {
             top: 2px;
             left: 1px;
         }
 
-        .thumb-img:nth-child(6) {
+
+        .img-thumb-span:nth-child(6) {
             top: 60px;
             left: 1px;
         }
 
-        .thumb-img:nth-child(11) {
+        .img-thumb-span:nth-child(11) {
             top: 120px;
             left: 1px;
         }
 
-        .thumb-img:nth-child(16) {
+        .img-thumb-span:nth-child(16) {
             top: 180px;
             left: 1px;
         }
 
-        .thumb-img:nth-child(2) {
+        .img-thumb-span:nth-child(2) {
             top: 2px;
             left: 61px;
         }
 
-        .thumb-img:nth-child(7) {
+        .img-thumb-span:nth-child(7) {
             top: 60px;
             left: 61px;
         }
 
-        .thumb-img:nth-child(12) {
+        .img-thumb-span:nth-child(12) {
             top: 120px;
             left: 61px;
         }
 
-        .thumb-img:nth-child(17) {
+        .img-thumb-span:nth-child(17) {
             top: 180px;
             left: 61px;
         }
 
-        .thumb-img:nth-child(3) {
+        .img-thumb-span:nth-child(3) {
             top: 2px;
             left: 121px;
         }
 
-        .thumb-img:nth-child(8) {
+        .img-thumb-span:nth-child(8) {
             top: 60px;
             left: 121px;
         }
 
-        .thumb-img:nth-child(13) {
+        .img-thumb-span:nth-child(13) {
             top: 120px;
             left: 121px;
         }
 
-        .thumb-img:nth-child(18) {
+        .img-thumb-span:nth-child(18) {
             top: 180px;
             left: 121px;
         }
 
-        .thumb-img:nth-child(4) {
+        .img-thumb-span:nth-child(4) {
             top: 2px;
             left: 181px;
         }
 
-        .thumb-img:nth-child(9) {
+        .img-thumb-span:nth-child(9) {
             top: 60px;
             left: 181px;
         }
 
-        .thumb-img:nth-child(14) {
+        .img-thumb-span:nth-child(14) {
             top: 120px;
             left: 181px;
         }
 
-        .thumb-img:nth-child(19) {
+        .img-thumb-span:nth-child(19) {
             top: 180px;
             left: 181px;
         }
 
-        .thumb-img:nth-child(5) {
+        .img-thumb-span:nth-child(5) {
             top: 2px;
             left: 241px;
         }
 
-        .thumb-img:nth-child(10) {
+        .img-thumb-span:nth-child(10) {
             top: 60px;
             left: 241px;
         }
 
-        .thumb-img:nth-child(15) {
+        .img-thumb-span:nth-child(15) {
             top: 120px;
             left: 241px;
         }
